@@ -98,4 +98,4 @@ TemplateServiceBroker 설치 전, Hypercloud operator 및 catalog controller mod
 - 생성 순서 : 아래 commmand로 yaml 적용
   - (namespace:tsb-ns / serviceaccount: tsb-account라고 가정)
   - kubectl apply -f tsb_service_broker.yaml ([파일](./yaml_install/tsb_service_broker.yaml))
-- 비고 : yaml파일의 {SERVER_IP}는 Step 4. Service를 통해 생성된 EXTERNAL-IP로 수정해야 합니다..
+- 비고 : yaml파일의 {SERVER_IP}는 Step 4. Service를 통해 생성된 EXTERNAL-IP로 수정해야 합니다...
