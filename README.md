@@ -98,4 +98,17 @@ TemplateServiceBroker 설치 전, Hypercloud operator 및 catalog controller mod
 - 생성 순서 : 아래 commmand로 yaml 적용
   - (namespace:tsb-ns / serviceaccount: tsb-account라고 가정)
   - kubectl apply -f tsb_service_broker.yaml ([파일](./yaml_install/tsb_service_broker.yaml))
-- 비고 : yaml파일의 {SERVER_IP}는 Step 4. Service를 통해 생성된 EXTERNAL-IP로 수정해야 합니다...
+- 비고 : yaml파일의 {SERVER_IP}는 Step 4. Service를 통해 생성된 EXTERNAL-IP로 수정해야 합니다.
+
+## Uninstall Steps
+기존 설치 yaml 역순으로 진행 (차례대로 아래와 같은 yaml 적용)
+- kubectl delete -f tsb_service_broker.yaml ([파일](./yaml_install/tsb_service_broker.yaml))
+- kubectl delete -f tsb_service.yaml ([파일](./yaml_install/tsb_service.yaml))
+- kubectl delete -f tsb_deployment.yaml ([파일](./yaml_install/tsb_deployment.yaml))
+- kubectl delete -f tsb_cluster_rolebinding.yaml ([파일](./yaml_install/tsb_cluster_rolebinding.yaml))
+- kubectl delete -f tsb_rolebinding.yaml ([파일](./yaml_install/tsb_rolebinding.yaml))
+- kubectl delete -f tsb_cluster_role.yaml ([파일](./yaml_install/tsb_cluster_role.yaml))
+- kubectl delete -f tsb_role.yaml ([파일](./yaml_install/tsb_role.yaml))
+- kubectl delete -f tsb_serviceaccount.yaml ([파일](./yaml_install/tsb_serviceaccount.yaml))
+- kubectl delete namespace tsb-ns
+- (namespace:tsb-ns / serviceaccount: tsb-account라고 가정)
