@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: template-service-broker
-  namespace: tsb-ns2
+  namespace: tsb-ns
   labels:
     hypercloud4: template-service-broker
     name: template-service-broker
