@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cluster-template-service-broker
+  name: cluster-template-service-broker
+  namespace: {clusterTsbNamespace}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cluster-template-service-broker
+  template:
+    metadata:
+      labels:
+        app: cluster-template-service-broker
+    spec:
+      serviceAccountName: cluster-tsb-sa
+      containers:
+      - image: {imageRegistry}/cluster-tsb:{clusterTsbVersion}
+        name: cluster-tsb
+        imagePullPolicy: Always
