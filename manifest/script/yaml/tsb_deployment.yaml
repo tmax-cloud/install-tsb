@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: template-service-broker
+  namespace: {tsbNamespace}
+  labels:
+    hypercloud4: template-service-broker
+    name: template-service-broker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      hypercloud4: template-service-broker
+  template:
+    metadata:
+      name: template-service-broker
+      labels:
+        hypercloud4: template-service-broker
+    spec:
+      containers:
+      - name: template-service-broker
+        image: {imageRegistry}/template-service-broker:b{tsbVersion}
+        imagePullPolicy: Always
+        env:
+        - name: BackIp
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: INSTANCEUUID
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: TZ
+          value: Asia/Seoul
+        ports:
+        - containerPort: 28677
+        resources:
+          requests:
+            cpu: 30m
+            memory: 100Mi
+          limits:
+            cpu: 50m
+            memory: 200Mi
+      serviceAccountName: tsb-account

@@ -1,0 +1,7 @@
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBroker
+metadata:
+  name: template-service-broker
+  namespace: {tsbNamespace}
+spec:
+  url: http://template-service-broker-service.{tsbNamespace}.svc.cluster.local:28677
