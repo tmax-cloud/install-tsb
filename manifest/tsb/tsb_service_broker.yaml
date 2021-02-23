@@ -1,7 +1,0 @@
-apiVersion: servicecatalog.k8s.io/v1beta1
-kind: ServiceBroker
-metadata:
-  name: hyperbroker4
-  namespace: ${YOUR_NAMESPACE}
-spec:
-  url: 'http://{SERVER_IP}:{SERVER_PORT}'
