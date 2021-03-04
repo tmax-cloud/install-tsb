@@ -12,7 +12,7 @@
      - imageRegistry={IP}:{PORT}
        - ex : imageRegistry=192.168.6.122:5000
      - templateVersion={template version}
-       - ex : templateVersion=0.0.1
+       - ex : templateVersion=0.0.2
      - templateNamespace={template namespace}
        - ex : templateNamespace=template
      - clusterTsbVersion={cluster tsb version}
