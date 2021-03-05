@@ -19,25 +19,25 @@ function set_env(){
     fi
 
     if [[ -z ${templateVersion} ]]; then
-        templateVersion=0.0.1
+        templateVersion=0.0.3
     else
         templateVersion=${templateVersion}
     fi
 
     if [[ -z ${templateNamespace} ]]; then
-        templateNamespace=0.0.1
+        templateNamespace=template
     else
         templateNamespace=${templateNamespace}
     fi
 
     if [[ -z ${clusterTsbVersion} ]]; then
-        clusterTsbVersion=0.0.1
+        clusterTsbVersion=0.0.3
     else
         clusterTsbVersion=${clusterTsbVersion}
     fi
 
     if [[ -z ${tsbVersion} ]]; then
-        tsbVersion=0.0.1
+        tsbVersion=0.0.3
     else
         tsbVersion=${tsbVersion}
     fi

@@ -12,15 +12,15 @@
      - imageRegistry={IP}:{PORT}
        - ex : imageRegistry=192.168.6.122:5000
      - templateVersion={template version}
-       - ex : templateVersion=0.0.2
+       - ex : templateVersion=0.0.3
      - templateNamespace={template namespace}
        - ex : templateNamespace=template
      - clusterTsbVersion={cluster tsb version}
-       - ex : clusterTsbVersion=0.0.1
+       - ex : clusterTsbVersion=0.0.3
      - clusterTsbNamespace={cluster tsb namespace}
        - ex : clusterTsbNamespace=cluster-tsb-ns
      - tsbVersion={tsb version}
-       - ex : tsbVersion=0.0.1
+       - ex : tsbVersion=0.0.3
      - tsbNamespace={tsb namespace}
        - ex : tsbNamespace=tsb-ns
 
@@ -76,7 +76,7 @@
 - 비고 :
     - tsb.config, install-tsb.sh파일과 yaml 디렉토리는 같은 디렉토리 내에에 있어야 합니다.
 
-## Step6. uninstall-cluster-tsb
+## Step7. uninstall-cluster-tsb
 - 목적 : `cluster-tsb를 삭제하기 위한 shell script 실행`
 - 순서 : 
 	```bash
@@ -85,7 +85,7 @@
 - 비고 :
     - tsb.config, install-tsb.sh파일과 yaml 디렉토리는 같은 디렉토리 내에에 있어야 합니다.
 
-## Step7. uninstall-tsb
+## Step8. uninstall-tsb
 - 목적 : `tsb를 삭제하기 위한 shell script 실행`
 - 순서 : 
 	```bash
@@ -94,7 +94,7 @@
 - 비고 :
     - tsb.config, install-tsb.sh파일과 yaml 디렉토리는 같은 디렉토리 내에에 있어야 합니다.
 
-## Step7. unregister-cluster-tsb
+## Step9. unregister-cluster-tsb
 - 목적 : `cluster-tsb를 servicebroker해제 하기 위한 shell script 실행`
 - 순서 : 
 	```bash
@@ -103,7 +103,7 @@
 - 비고 :
     - tsb.config, install-tsb.sh파일과 yaml 디렉토리는 같은 디렉토리 내에에 있어야 합니다.
 
-## Step8. unregister-tsb
+## Step10. unregister-tsb
 - 목적 : `tsb를 servicebroker해제 하기 위한 shell script 실행`
 - 순서 : 
 	```bash
