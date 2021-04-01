@@ -17,6 +17,6 @@ spec:
     spec:
       serviceAccountName: tsb-sa
       containers:
-      - image: {imageRegistry}/tsb:{tsbVersion}
+      - image: {imageRegistry}/tmaxcloudck/tsb:{tsbVersion}
         name: tsb
         imagePullPolicy: Always

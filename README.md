@@ -109,7 +109,7 @@
 - 생성 순서 : 아래 command로 yaml 적용
   - kubectl apply -f deploy_manager.yaml ([파일](./manifest/yaml/template-operator/deploy_manager.yaml))
 - 비고: 반드시, {templateNamespace}를 사용자가 정한 namespace로 변경해주세요.
-- 비고: image 항목의 {imageRegistry}와 {templateVersion}를 환경에 맞게 변경해주세요. ({imageRegistry}/template-operator:{templateVersion})
+- 비고: image 항목의 {imageRegistry}와 {templateOperatorVersion}를 환경에 맞게 변경해주세요. ({imageRegistry}/tmaxcloudck/template-operator:{templateOperatorVersion})
 
 ## Cluster-tsb install Steps
 1. [Namespace 및 ServiceAccount 생성](#Step-1-Cluster-tsb-Namespace-및-ServiceAccount-생성)
@@ -186,7 +186,7 @@
 - 생성 순서 : 아래 commmand로 yaml 적용
   - kubectl apply -f tsb_deployment.yaml ([파일](./manifest/yaml/tsb/tsb_deployment.yaml))
 - 비고 : 파일내부 {tsbNamespace}는 사용자에 맞게 변경해야 합니다.
-- 비고 : image 항목은 {imageRegistry}와 {tsbVersion}은 사용자 환경에 맞게 변경해야 합니다. ({imageRegistry}/tsb:{tsbVersion})
+- 비고 : image 항목은 {imageRegistry}와 {tsbVersion}은 사용자 환경에 맞게 변경해야 합니다. ({imageRegistry}/tmaxcloudck/tsb:{tsbVersion})
 
 ## Step 4. Tsb Service 생성
 - 목적 : `server에 접속하기 위한 endpoint 생성.`

@@ -19,7 +19,7 @@ spec:
         - /manager
         args:
         - --enable-leader-election
-        image: {imageRegistry}/template-operator:{templateVersion}
+        image: {imageRegistry}/tmaxcloudck/template-operator:{templateOperatorVersion}
         imagePullPolicy: Always
         name: manager
         #resources:
