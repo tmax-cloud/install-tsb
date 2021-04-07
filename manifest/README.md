@@ -11,8 +11,8 @@
   - 환경에 맞는 config 내용을 작성합니다.
      - imageRegistry={IP}:{PORT}
        - ex : imageRegistry=192.168.6.122:5000
-     - templateVersion={template version}
-       - ex : templateVersion=0.0.6
+     - templateOperatorVersion={template operator version}
+       - ex : templateOperatorVersion=0.0.6
      - templateNamespace={template namespace}
        - ex : templateNamespace=template
      - clusterTsbVersion={cluster tsb version}

@@ -13,15 +13,15 @@ function set_env(){
     echo "======================== set env  ========================"
     echo "========================================================================="
     if [[ -z ${imageRegistry} ]]; then
-        imageRegistry=tmaxcloudck
+        imageRegistry=docker.io
     else
         imageRegistry=${imageRegistry}
     fi
 
-    if [[ -z ${templateVersion} ]]; then
-        templateVersion=0.0.3
+    if [[ -z ${templateOperatorVersion} ]]; then
+        templateOperatorVersion=0.0.6
     else
-        templateVersion=${templateVersion}
+        templateOperatorVersion=${templateOperatorVersion}
     fi
 
     if [[ -z ${templateNamespace} ]]; then
@@ -31,13 +31,13 @@ function set_env(){
     fi
 
     if [[ -z ${clusterTsbVersion} ]]; then
-        clusterTsbVersion=0.0.3
+        clusterTsbVersion=0.0.6
     else
         clusterTsbVersion=${clusterTsbVersion}
     fi
 
     if [[ -z ${tsbVersion} ]]; then
-        tsbVersion=0.0.3
+        tsbVersion=0.0.6
     else
         tsbVersion=${tsbVersion}
     fi
@@ -58,7 +58,7 @@ function set_env(){
     sed -i "s|{templateNamespace}|${templateNamespace}|g" ${template_dir}/deploy_rbac.yaml
     sed -i "s|{templateNamespace}|${templateNamespace}|g" ${template_dir}/deploy_manager.yaml
     sed -i "s|{imageRegistry}|${imageRegistry}|g" ${template_dir}/deploy_manager.yaml
-    sed -i "s|{templateVersion}|${templateVersion}|g" ${template_dir}/deploy_manager.yaml
+    sed -i "s|{templateOperatorVersion}|${templateOperatorVersion}|g" ${template_dir}/deploy_manager.yaml
 
     sed -i "s|{imageRegistry}|${imageRegistry}|g" ${cluster_tsb_dir}/tsb_deployment.yaml
     sed -i "s|{clusterTsbNamespace}|${clusterTsbNamespace}|g" ${cluster_tsb_dir}/tsb_deployment.yaml
