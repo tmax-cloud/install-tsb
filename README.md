@@ -67,7 +67,7 @@
    docker load < tsb:${TSB_VERSION}.tar
 
    # 이미지 Tag
-   docker tage tmaxcloudck/template-operator:${TEMPLATE_OPERATOR_VERSION} ${REGISTRY}/tmaxcloudck/template-operator:${TEMPLATE_OPERATOR_VERSION}
+   docker tag tmaxcloudck/template-operator:${TEMPLATE_OPERATOR_VERSION} ${REGISTRY}/tmaxcloudck/template-operator:${TEMPLATE_OPERATOR_VERSION}
    docker tag tmaxcloudck/cluster-tsb:${CLUSTER_TSB_VERSION} ${REGISTRY}/tmaxcloudck/cluster-tsb:${CLUSTER_TSB_VERSION}
    docker tag tmaxcloudck/tsb:${TSB_VERSION} ${REGISTRY}/tmaxcloudck/tsb:${TSB_VERSION}
 
