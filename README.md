@@ -11,13 +11,13 @@
     - clustertemplate을 서비스하는 template-service-broker 모듈
     - Hypercloud 이용자가 공통으로 사용 할 수 있는 template
     - latest image: tmaxcloudck/cluster-tsb:0.0.6
-    - latest version: 0.0.7
+    - latest version: 0.0.8
 - tsb
     - template을 서비스하는 template-service-broker 모듈
     - Hypercloud 이용자가 직접 정의해서 사용 할 수 있는 template
     - 사용자 namespace 별로 띄워야 이용 가능
     - latest image: tmaxcloudck/tsb:0.0.6
-    - latest version: 0.0.7
+    - latest version: 0.0.8
 
 ## Prerequisites
 
@@ -34,8 +34,8 @@
    mkdir -p ~/template-install
    export TEMPLATE_HOME=~/template-install
    export TEMPLATE_OPERATOR_VERSION=0.0.7
-   export CLUSTER_TSB_VERSION=0.0.7
-   export TSB_VERSION=0.0.7
+   export CLUSTER_TSB_VERSION=0.0.8
+   export TSB_VERSION=0.0.8
    cd $TEMPLATE_HOME
    ```
 
