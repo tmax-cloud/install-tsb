@@ -122,39 +122,33 @@
 ## Step 1. Cluster-tsb Namespace 및 ServiceAccount 생성
 - 목적 : `Namespace 및 ServiceAccount 생성.`
 - 생성 순서 : 아래 command로 yaml 적용
-  - kubectl create namespace {clusterTsbNamespace}
+  - kubectl create namespace cluster-tsb-ns
   - kubectl apply -f tsb_serviceaccount.yaml ([파일](./manifest/yaml/cluster-tsb/tsb_serviceaccount.yaml))
-- 비고 : {clusterTsbNamespace}를 사용자가 정한 namespace로 변경해주세요.
 
 ## Step 2. Cluster-tsb Role 및 RoleBinding 생성
 - 목적 : `해당 namespace의 serviceaccount에 권한 부여.`
 - 생성 순서 : 아래 command로 yaml 적용
-  - (namespace:cluster-tsb-ns / serviceaccount: cluster-tsb-sa라고 가정)
+  - (serviceaccount: cluster-tsb-sa라고 가정)
   - kubectl apply -f tsb_role.yaml ([파일](./manifest/yaml/cluster-tsb/tsb_role.yaml))
   - kubectl apply -f tsb_rolebinding.yaml ([파일](./manifest/yaml/cluster-tsb/tsb_rolebinding.yaml))
-- 비고 : clusterRolebinding 의 {clusterTsbNamespace}를 사용자가 정한 namespace로 변경해주세요.
 
 ## Step 3. Cluster-tsb Server 생성
 - 목적 : `TemplateServiceBroker Server deploy 및 서비스 계정 마운트.`
 - 생성 순서 : 아래 commmand로 yaml 적용
+  - (serviceaccount: cluster-tsb-sa라고 가정)
   - kubectl apply -f tsb_deployment.yaml ([파일](./manifest/yaml/cluster-tsb/tsb_deployment.yaml))
-- 비고 : 파일의 {clusterTsbNamespace}, {imageRegistry}, {clusterTsbVersion} 부분은 사용자 환경에 맞게 변경 해주셔야 합니다!
+- 비고 : 파일의 {imageRegistry}, {clusterTsbVersion} 부분은 사용자 환경에 맞게 변경 해주셔야 합니다.
 
 ## Step 4. Cluster-tsb Service 생성
 - 목적 : `server에 접속하기 위한 endpoint 생성.`
 - 생성 순서 : 아래 commmand로 yaml 적용
-  - (namespace:cluster-tsb-ns / serviceaccount: cluster-tsb-sa라고 가정)
   - kubectl apply -f tsb_service.yaml ([파일](./manifest/yaml/cluster-tsb/tsb_service.yaml))
-- 비고: {clusterTsbNamespace}를 사용자가 정한 namespace로 변경해주세요.
 
 ## Step 5. Cluster-tsb Broker 등록
-
 - 목적 : `TemplateServiceBroker 등록.`
 - 생성 순서 : 아래 commmand로 yaml 적용
-  - (namespace:cluster-tsb-ns / serviceaccount: cluster-tsb-sa라고 가정)
   - kubectl apply -f tsb_service_broker.yaml ([파일](./manifest/yaml/cluster-tsb/tsb_service_broker.yaml))
-- 비고 : yaml파일의 {clusterTsbNamespace}를 사용자가 정한 namespace로 변경해주세요.
-- 비고 : clustser-tsb server가 정상적으로 기동 확인 후, 등록해주세요.
+- 비고 : clustser-tsb server 정상 기동 확인 후, 등록해주세요.
 
 
 ## Tsb install Steps

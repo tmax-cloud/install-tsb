@@ -1,11 +1,11 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: cluster-tsb-rb-{clusterTsbNamespace}
+  name: cluster-tsb-rb
 subjects:
 - kind: ServiceAccount
   name: cluster-tsb-sa
-  namespace: {clusterTsbNamespace}
+  namespace: cluster-tsb-ns
   apiGroup: ""
 roleRef:
   kind: ClusterRole

@@ -4,7 +4,7 @@ metadata:
   labels:
     app: cluster-template-service-broker
   name: cluster-template-service-broker
-  namespace: {clusterTsbNamespace}
+  namespace: cluster-tsb-ns
 spec:
   replicas: 1
   selector:
