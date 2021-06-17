@@ -4,8 +4,8 @@
 
 - template-operator
     - template관련 CustomResource에 대한 operator
-    - latest image: tmaxcloudck/template-operator:0.0.9
-    - latest version: 0.0.9
+    - latest image: tmaxcloudck/template-operator:0.1.0
+    - latest version: 0.1.0
 
 - cluster-tsb
     - clustertemplate을 서비스하는 template-service-broker 모듈
