@@ -10,14 +10,14 @@
 - cluster-tsb
     - clustertemplate을 서비스하는 template-service-broker 모듈
     - Hypercloud 이용자가 공통으로 사용 할 수 있는 template
-    - latest image: tmaxcloudck/cluster-tsb:0.0.8
-    - latest version: 0.0.8
+    - latest image: tmaxcloudck/cluster-tsb:0.1.0
+    - latest version: 0.1.0
 - tsb
     - template을 서비스하는 template-service-broker 모듈
     - Hypercloud 이용자가 직접 정의해서 사용 할 수 있는 template
     - 사용자 namespace 별로 띄워야 이용 가능
-    - latest image: tmaxcloudck/tsb:0.0.8
-    - latest version: 0.0.8
+    - latest image: tmaxcloudck/tsb:0.1.0
+    - latest version: 0.1.0
 
 ## Prerequisites
 
@@ -34,11 +34,11 @@
 
 ## Step 1. Template operator CRD 생성
 - 목적 : `Template operator CRD 생성`
-- 생성 순서 : 아래 command로 yaml 적용
-  - kubectl apply -f tmax.io_catalogserviceclaims.yaml ([파일](./manifest/yaml/crd/tmax.io_catalogserviceclaims.yaml))
-  - kubectl apply -f tmax.io_clustertemplates.yaml ([파일](./manifest/yaml/crd/tmax.io_clustertemplates.yaml))
-  - kubectl apply -f tmax.io_templateinstances.yaml ([파일](./manifest/yaml/crd/tmax.io_templateinstances.yaml))
-  - kubectl apply -f tmax.io_templates.yaml ([파일](./manifest/yaml/crd/tmax.io_templates.yaml))
+- 생성 순서 : 아래 command로 번역 CRD yaml 적용
+  - kubectl apply -f tmax.io_clustertemplateclaims.yaml ([파일](./manifest/yaml/crd/key-mapping/tmax.io_clustertemplateclaims.yaml))
+  - kubectl apply -f tmax.io_clustertemplates.yaml ([파일](./manifest/yaml/crd/key-mapping/tmax.io_clustertemplates.yaml))
+  - kubectl apply -f tmax.io_templateinstances.yaml ([파일](./manifest/yaml/crd/key-mapping/tmax.io_templateinstances.yaml))
+  - kubectl apply -f tmax.io_templates.yaml ([파일](./manifest/yaml/crd/key-mapping/tmax.io_templates.yaml))
 
 ## Step 2. Template operator Namespace 생성
 - 목적 : `Template operator namespace 생성`
@@ -149,10 +149,10 @@
   1. kubectl delete -f deploy_manager.yaml ([파일](./manifest/yaml/template-operator/deploy_manager.yaml))
   2. kubectl delete -f deploy_rbac.yaml ([파일](./manifest/yaml/template-operator/deploy_rbac.yaml))
   3. kubectl delete namespace {templateNamespace}
-  4. kubectl delete -f tmax.io_templates.yaml ([파일](./manifest/yaml/crd/tmax.io_templates.yaml)
-  5. kubectl delete -f tmax.io_templateinstances.yaml ([파일](./manifest/yaml/crd/tmax.io_templateinstances.yaml))
-  6. kubectl delete -f tmax.io_clustertemplates.yaml ([파일](./manifest/yaml/crd/tmax.io_clustertemplates.yaml))
-  7. kubectl delete -f tmax.io_catalogserviceclaims.yaml ([파일](./manifest/yaml/crd/tmax.io_catalogserviceclaims.yaml))
+  4. kubectl delete -f tmax.io_templates.yaml ([파일](./manifest/yaml/crd/key-mapping/tmax.io_templates.yaml)
+  5. kubectl delete -f tmax.io_templateinstances.yaml ([파일](./manifest/yaml/crd/key-mapping/tmax.io_templateinstances.yaml))
+  6. kubectl delete -f tmax.io_clustertemplates.yaml ([파일](./manifest/yaml/crd/key-mapping/tmax.io_clustertemplates.yaml))
+  7. kubectl delete -f tmax.io_clustertemplateclaims.yaml ([파일](./manifest/yaml/crd/key-mapping/tmax.io_clustertemplateclaims.yaml))
 
 ## Cluster-tsb uninstall Steps
 - 설치 역순으로 진행 (차례대로 아래와 같은 yaml 적용)
