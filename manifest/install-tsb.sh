@@ -83,7 +83,7 @@ function install_template() {
     echo  "=======================  start install template  ======================"
     echo  "========================================================================="
     #1. create crd
-    kubectl apply -f ${crd_dir}/tmax.io_catalogserviceclaims.yaml
+    kubectl apply -f ${crd_dir}/tmax.io_clustertemplateclaims.yaml
     kubectl apply -f ${crd_dir}/tmax.io_clustertemplates.yaml
     kubectl apply -f ${crd_dir}/tmax.io_templateinstances.yaml
     kubectl apply -f ${crd_dir}/tmax.io_templates.yaml
@@ -173,7 +173,7 @@ function uninstall_template(){
     kubectl delete -f ${template_dir}/deploy_manager.yaml
     kubectl delete -f ${template_dir}/deploy_rbac.yaml
     kubectl delete namespace ${templateNamespace}
-    kubectl delete -f ${crd_dir}/tmax.io_catalogserviceclaims.yaml
+    kubectl delete -f ${crd_dir}/tmax.io_clustertemplateclaims.yaml
     kubectl delete -f ${crd_dir}/tmax.io_clustertemplates.yaml
     kubectl delete -f ${crd_dir}/tmax.io_templateinstances.yaml
     kubectl delete -f ${crd_dir}/tmax.io_templates.yaml
