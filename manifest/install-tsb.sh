@@ -3,7 +3,7 @@
 install_dir=$(dirname "$0")
 . ${install_dir}/tsb.config
 yaml_dir="${install_dir}/yaml"
-crd_dir="${yaml_dir}/crd"
+crd_dir="${yaml_dir}/crd/key-mapping"
 template_dir="${yaml_dir}/template-operator"
 cluster_tsb_dir="${yaml_dir}/cluster-tsb"
 tsb_dir="${yaml_dir}/tsb"
