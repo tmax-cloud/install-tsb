@@ -126,6 +126,49 @@ spec:
         status:
           description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status"
           properties:
+            clustertemplate:
+              properties:
+                metadata:
+                  properties:
+                    name:
+                      type: "string"
+                  type: "object"
+                objects:
+                  items:
+                    type: "object"
+                  type: "array"
+                parameters:
+                  items:
+                    properties:
+                      description:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.clustertemplate.properties.parameters.items.properties.description"
+                        type: "string"
+                      displayName:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.clustertemplate.properties.parameters.items.properties.displayName"
+                        type: "string"
+                      name:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.clustertemplate.properties.parameters.items.properties.name"
+                        type: "string"
+                      required:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.clustertemplate.properties.parameters.items.properties.required"
+                        type: "boolean"
+                      value:
+                        anyOf:
+                        - type: "integer"
+                        - type: "string"
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.clustertemplate.properties.parameters.items.properties.value"
+                        x-kubernetes-int-or-string: true
+                      valueType:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.clustertemplate.properties.parameters.items.properties.valueType"
+                        enum:
+                        - "string"
+                        - "number"
+                        type: "string"
+                    required:
+                    - "name"
+                    type: "object"
+                  type: "array"
+              type: "object"
             conditions:
               items:
                 properties:
@@ -168,6 +211,49 @@ spec:
                 - "ref"
                 type: "object"
               type: "array"
+            template:
+              properties:
+                metadata:
+                  properties:
+                    name:
+                      type: "string"
+                  type: "object"
+                objects:
+                  items:
+                    type: "object"
+                  type: "array"
+                parameters:
+                  items:
+                    properties:
+                      description:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.template.properties.parameters.items.properties.description"
+                        type: "string"
+                      displayName:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.template.properties.parameters.items.properties.displayName"
+                        type: "string"
+                      name:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.template.properties.parameters.items.properties.name"
+                        type: "string"
+                      required:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.template.properties.parameters.items.properties.required"
+                        type: "boolean"
+                      value:
+                        anyOf:
+                        - type: "integer"
+                        - type: "string"
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.template.properties.parameters.items.properties.value"
+                        x-kubernetes-int-or-string: true
+                      valueType:
+                        description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.status.properties.template.properties.parameters.items.properties.valueType"
+                        enum:
+                        - "string"
+                        - "number"
+                        type: "string"
+                    required:
+                    - "name"
+                    type: "object"
+                  type: "array"
+              type: "object"
           type: "object"
       type: "object"
   version: "v1"
