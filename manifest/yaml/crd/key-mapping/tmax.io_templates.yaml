@@ -73,6 +73,9 @@ spec:
               name:
                 description: "%tmax.io_templates.yaml.spec.validation.openAPIV3Schema.properties.parameters.items.properties.name"
                 type: "string"
+              regex:
+                description: "%tmax.io_templates.yaml.spec.validation.openAPIV3Schema.properties.parameters.items.properties.regex"
+                type: "string"
               required:
                 description: "%tmax.io_templates.yaml.spec.validation.openAPIV3Schema.properties.parameters.items.properties.required"
                 type: "boolean"
