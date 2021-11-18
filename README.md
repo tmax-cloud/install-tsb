@@ -4,20 +4,20 @@
 
 - template-operator
     - template관련 CustomResource에 대한 operator
-    - latest image: tmaxcloudck/template-operator:0.1.1
-    - latest version: 0.1.1
+    - latest image: tmaxcloudck/template-operator:0.2.3
+    - latest version: 0.2.3
 
 - cluster-tsb
     - clustertemplate을 서비스하는 template-service-broker 모듈
     - Hypercloud 이용자가 공통으로 사용 할 수 있는 template
-    - latest image: tmaxcloudck/cluster-tsb:0.1.0
-    - latest version: 0.1.0
+    - latest image: tmaxcloudck/cluster-tsb:0.1.2
+    - latest version: 0.1.2
 - tsb
     - template을 서비스하는 template-service-broker 모듈
     - Hypercloud 이용자가 직접 정의해서 사용 할 수 있는 template
     - 사용자 namespace 별로 띄워야 이용 가능
-    - latest image: tmaxcloudck/tsb:0.1.0
-    - latest version: 0.1.0
+    - latest image: tmaxcloudck/tsb:0.1.2
+    - latest version: 0.1.2
 
 ## Prerequisites
 
