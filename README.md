@@ -5,7 +5,7 @@
 - template-operator
     - template관련 CustomResource에 대한 operator
     - latest image: tmaxcloudck/template-operator:0.2.3
-    - latest version: 0.2.3
+    - latest version: 0.2.4
 
 - cluster-tsb
     - clustertemplate을 서비스하는 template-service-broker 모듈
