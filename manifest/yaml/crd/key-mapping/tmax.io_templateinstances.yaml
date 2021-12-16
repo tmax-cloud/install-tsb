@@ -82,6 +82,19 @@ spec:
                     type: "object"
                   type: "array"
               type: "object"
+            gitops:
+              description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.spec.properties.gitops"
+              properties:
+                path:
+                  description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.spec.properties.gitops.properties.path"
+                  type: "string"
+                secret:
+                  description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.spec.properties.gitops.properties.secret"
+                  type: "string"
+                sourcegitrepo:
+                  description: "%tmax.io_templateinstances.yaml.spec.validation.openAPIV3Schema.properties.spec.properties.gitops.properties.sourcegitrepo"
+                  type: "string"
+              type: "object"
             template:
               properties:
                 metadata:
