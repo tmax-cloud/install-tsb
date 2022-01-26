@@ -19,7 +19,7 @@ function set_env(){
     fi
 
     if [[ -z ${templateOperatorVersion} ]]; then
-        templateOperatorVersion=0.0.6
+        templateOperatorVersion=0.2.7
     else
         templateOperatorVersion=${templateOperatorVersion}
     fi
@@ -31,13 +31,13 @@ function set_env(){
     fi
 
     if [[ -z ${clusterTsbVersion} ]]; then
-        clusterTsbVersion=0.0.6
+        clusterTsbVersion=0.1.3
     else
         clusterTsbVersion=${clusterTsbVersion}
     fi
 
     if [[ -z ${tsbVersion} ]]; then
-        tsbVersion=0.0.6
+        tsbVersion=0.1.3
     else
         tsbVersion=${tsbVersion}
     fi
