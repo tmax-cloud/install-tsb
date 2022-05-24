@@ -7,9 +7,9 @@ Template operator Service를 사용하고자 하는 클러스터에 Service cata
 Service broker spec에 TSB service url을 등록 후 사용.
 
 ![image](https://raw.githubusercontent.com/tmax-cloud/install-tsb/tsb-5.0/manifest/TSB.PNG)
-①: 카탈로그 컨트롤러
-②: Template Service Broker에 해당
-③: Template Service Broker로 생성된 Template Instance에 해당
+#①: 카탈로그 컨트롤러
+#②: Template Service Broker에 해당
+#③: Template Service Broker로 생성된 Template Instance에 해당
 
 ## 구성 요소 및 버전
 
