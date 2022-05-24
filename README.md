@@ -1,5 +1,15 @@
 # TemplateServiceBroker 설치 가이드
 
+## 개요
+Template operator Service를 Service Catalog를 통해 외부 클러스터에 제공하기 위한 Template Service Broker.
+Template operator Service를 제공하는 클러스터에 TSB / Template-operator를 설치 후,
+Template operator Service를 사용하고자 하는 클러스터에 Service catalog (카탈로그 컨트롤러)를 설치 후 Service broker instance를 생성 하고
+Service broker spec에 TSB service url을 등록 후 사용.
+
+
+
+
+
 ## 구성 요소 및 버전
 
 - template-operator
