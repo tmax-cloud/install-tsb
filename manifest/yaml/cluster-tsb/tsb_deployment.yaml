@@ -20,3 +20,5 @@ spec:
       - image: {imageRegistry}/tmaxcloudck/cluster-tsb:{clusterTsbVersion}
         name: cluster-tsb
         imagePullPolicy: Always
+        args:
+        - --zap-log-level=error
